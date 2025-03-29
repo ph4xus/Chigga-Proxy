@@ -1,1 +1,234 @@
-ss
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Tab Cloak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --primary-dark: #5a189a;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f8f9fa;
+            --gray: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+            padding-bottom: 50px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        header {
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .settings-section {
+            margin-top: 40px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #b3b3b3;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toggle-container input[type="checkbox"] {
+            appearance: none;
+            width: 50px;
+            height: 25px;
+            background: var(--gray);
+            border-radius: 25px;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked {
+            background: var(--primary);
+        }
+
+        .toggle-container input[type="checkbox"]:before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 19px;
+            height: 19px;
+            background-color: white;
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .toggle-container input[type="checkbox"]:checked:before {
+            left: 28px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #b3b3b3;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">Tab Cloak</div>
+            </div>
+        </header>
+
+        <div class="settings-section">
+            <h1>Tab Cloak</h1>
+            <p><b>Google Search:</b>
+                <button onclick="var search = prompt('What is blud searching for???:'); if (search) applyUrl('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAmVBMVEVHcEz////////////////+/v/////////////////////////5ysjxi4TqQTTpKRXqOinubWP0rKf89+/96+rsWFD1sq7/4qL1lAD8xDb8uwH6sgzrQhr7wCCsxfqjv/n80GhBhPU2gPUtfPTf6f1WkfVTsFvj8ubWvDEzqVMqpksRokFuvYG838QgpEaQy53K5tA3l6as17YMoVzUAAAADHRSTlMAMobC6v5g7P8U3jtapumyAAABHUlEQVR4AX2TBRaCUBBFP91ldxcd+1+cE2LDVfKd6UE8kWRF1TRVkSXxjW6YTwz9Q7Js8wPbEk8c8wfnj6Z9q5bJuJ4fBGE0GJoEe+Z4o3EQ+kAYBhOOS3myGUkh6YFrIpizQXYBvvQ9LwpC1BADaqc8xmhGL4cRa4AkZLxMZ6CNzC9koeBlvliungZPFKHiZbFYrE1k82CLBasCz0MQdyTuD8zxhJl8iec9w+KX2/0RaEW1TWh9uZoEmx81SohLucXJxWS0E5ieuRRuQhrHScYjOR3AcMNNEAaKOapFWVV5ltYPQ+PZ+BJUkIsiiZP6eOLGP0fWpEnMFPG1Hdlz2MOySMEyjZvnsBGn3ZBrnlfXniViWOtfzf6l7vsc7uGRJfdwhuwGAAAAAElFTkSuQmCC', search + ' - Google Search');">Apply</button>
+            </p>
+
+            <p><b>Google Classroom:</b>
+                <button onclick="applyUrl('https://ssl.gstatic.com/classroom/favicon.png', 'Classes');">Apply</button>
+            </p>
+
+            <p><b>Google Docs:</b>
+                <button onclick="var docsv3 = prompt('Which Google doc is bro on????'); if (docsv3) applyUrl('https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico', docsv3 + ' - Google Docs');">Apply</button>
+            </p>
+
+            <p><b>Google Drive:</b>
+                <button onclick="var docs = prompt('Which Google drive is bro on???'); if (docs) applyUrl('https://ssl.gstatic.com/images/branding/product/2x/hh_drive_36dp.png', docs + ' - Google Drive');">Apply</button>
+            </p>
+
+            <p><b>Canvas:</b>
+                <button onclick="applyUrl('https://du11hjcvx0uqb.cloudfront.net/dist/images/favicon-e10d657a73.ico', 'Dashboard');">Apply</button>
+            </p>
+
+            <h1>Leave Confirm (DyKnow & GoGuardian users)</h1>
+            <p>Sadly, there's no way to differentiate between clicking links and closing tabs. Womp womp.</p>
+            <button id="toggleButton">False</button>
+
+            <h1>Load Site on Blank</h1>
+            <div class="toggle-container">
+                <label for="site-blank-toggle">Enable</label>
+                <input type="checkbox" id="site-blank-toggle">
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Gigga proxy. All Rights Reserved.
+    </footer>
+
+    <script>
+        function applyUrl(url, tabName) {
+            document.title = tabName;
+        
+            var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+            link.type = 'image/x-icon';
+            link.rel = 'shortcut icon';
+            link.href = url;
+            document.getElementsByTagName('head')[0].appendChild(link);
+        
+            localStorage.setItem('tabName', tabName);
+            localStorage.setItem('tabImage', url);
+        }
+  
+
+        document.getElementById('toggleButton').addEventListener('click', function() {
+            const toggleText = this.innerText === 'False' ? 'True' : 'False';
+            this.innerText = toggleText;
+        });
+    </script>
+
+</body>
+</html>
