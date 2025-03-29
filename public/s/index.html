@@ -49,16 +49,6 @@
             gap: 10px;
         }
 
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
         .logo-text {
             font-size: 24px;
             font-weight: 700;
@@ -78,6 +68,11 @@
 
         .settings-section {
             margin-top: 40px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Blur effect */
+            border-radius: 12px; /* Rounded corners */
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
         }
 
         p {
@@ -165,7 +160,6 @@
     <div class="container">
         <header>
             <div class="logo">
-                <div class="logo-icon"></div>
                 <div class="logo-text">Tab Cloak</div>
             </div>
         </header>
