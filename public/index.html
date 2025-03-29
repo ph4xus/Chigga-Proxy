@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script src="/uv/uv.bundle.js"></script>
-        <script src="/uv/uv.config.js"></script>
-
-        <script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gigga proxy</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+    <script>
         if ("serviceWorker" in navigator) {
             window.addEventListener("load", () => {
                 navigator.serviceWorker.register("/uv/sw.js", {
@@ -13,12 +18,198 @@
             });
         }
         </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12 16V16.01M12 8V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Gigga proxy</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main class="main-content">
+            <h1>Browse Without Limits</h1>
+            <p class="subtitle">Access any website securely and anonymously with our high-speed proxy service. Your privacy is our priority.</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Enter website URL..." id="urlInput">
+                <button class="search-btn" id="searchButton">Go</button>
+            </div>            
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4 15C19.2669 15.3016 19.227 15.6363 19.2856 15.9606C19.3442 16.2848 19.4985 16.5819 19.726 16.8094C19.9535 17.0369 20.2506 17.1912 20.5748 17.2498C20.8991 17.3084 21.2338 17.2685 21.5354 17.1354C22.3654 16.8004 23.0854 16.2633 23.6254 15.5789C24.1654 14.8945 24.5058 14.089 24.6114 13.2419C24.717 12.3948 24.5839 11.5379 24.2254 10.7639C23.8668 9.9899 23.2963 9.3295 22.5754 8.85489C21.8545 8.38028 21.0118 8.11033 20.1439 8.07607C19.276 8.04181 18.4173 8.24468 17.664 8.65989C17.3657 8.82778 17.1213 9.07845 16.9612 9.38211C16.8011 9.68577 16.7325 10.0286 16.764 10.3709V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M19.4 15C19.133 15.5947 18.6832 16.0924 18.1086 16.4242C17.534 16.756 16.8629 16.9049 16.1899 16.8496C15.5169 16.7943 14.8754 16.5378 14.3614 16.1174C13.8474 15.697 13.4875 15.1355 13.3354 14.5149C13.1834 13.8943 13.2472 13.2457 13.5166 12.6669C13.7861 12.0881 14.2459 11.6106 14.8214 11.3099C14.5214 10.8599 14.3214 10.3449 14.2354 9.80489C14.1494 9.26489 14.1794 8.71289 14.3234 8.18489C13.7874 8.05289 13.2286 8.00689 12.6734 8.04889C12.1182 8.09089 11.5766 8.22089 11.0714 8.43289C10.5662 8.64489 10.1054 8.93589 9.70944 9.29289C9.31344 9.64989 8.98844 10.0669 8.74944 10.5249C8.51044 10.9829 8.36144 11.4739 8.30944 11.9779C8.25744 12.4819 8.30344 12.9899 8.44444 13.4779C8.58544 13.9659 8.81944 14.4249 9.13544 14.8309C9.45144 15.2369 9.84344 15.5819 10.2914 15.8479C10.7394 16.1139 11.2344 16.2959 11.7494 16.3839C12.2644 16.4719 12.7894 16.4649 13.3014 16.3629" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.6 15C4.73314 15.3016 4.77301 15.6363 4.71441 15.9606C4.65581 16.2848 4.50152 16.5819 4.27403 16.8094C4.04653 17.0369 3.74943 17.1912 3.42519 17.2498C3.10094 17.3084 2.76624 17.2685 2.46461 17.1354C1.63461 16.8004 0.914611 16.2633 0.374611 15.5789C-0.165389 14.8945 -0.505789 14.089 -0.611389 13.2419C-0.716989 12.3948 -0.583889 11.5379 -0.225389 10.7639C0.133111 9.9899 0.703611 9.3295 1.42461 8.85489C2.14561 8.38028 2.98831 8.11033 3.85619 8.07607C4.72406 8.04181 5.58281 8.24468 6.33611 8.65989C6.63441 8.82778 6.87881 9.07845 7.03891 9.38211C7.19901 9.68577 7.26761 10.0286 7.23611 10.3709V12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4.6 15C4.86701 15.5947 5.31676 16.0924 5.89139 16.4242C6.46601 16.756 7.13714 16.9049 7.81011 16.8496C8.48309 16.7943 9.12461 16.5378 9.63861 16.1174C10.1526 15.697 10.5125 15.1355 10.6646 14.5149C10.8166 13.8943 10.7528 13.2457 10.4834 12.6669C10.2139 12.0881 9.75414 11.6106 9.17861 11.3099C9.47861 10.8599 9.67861 10.3449 9.76461 9.80489C9.85061 9.26489 9.82061 8.71289 9.67661 8.18489C10.2126 8.05289 10.7714 8.00689 11.3266 8.04889C11.8818 8.09089 12.4234 8.22089 12.9286 8.43289C13.4338 8.64489 13.8946 8.93589 14.2906 9.29289C14.6866 9.64989 15.0116 10.0669 15.2506 10.5249C15.4896 10.9829 15.6386 11.4739 15.6906 11.9779C15.7426 12.4819 15.6966 12.9899 15.5556 13.4779C15.4146 13.9659 15.1806 14.4249 14.8646 14.8309C14.5486 15.2369 14.1566 15.5819 13.7086 15.8479C13.2606 16.1139 12.7656 16.2959 12.2506 16.3839C11.7356 16.4719 11.2106 16.4649 10.6986 16.3629" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Secure Connection</h3>
+                    <p class="feature-desc">All your traffic is encrypted to protect your data from prying eyes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 11H5C3.89543 11 3 11.8954 3 13V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V13C21 11.8954 20.1046 11 19 11Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 11V7C7 5.67392 7.52678 4.40215 8.46447 3.46447C9.40215 2.52678 10.6739 2 12 2C13.3261 2 14.5979 2.52678 15.5355 3.46447C16.4732 4.40215 17 5.67392 17 7V11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">No Logs</h3>
+                    <p class="feature-desc">We don't store any of your browsing activity or personal information.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 6V12L16 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Fast Speeds</h3>
+                    <p class="feature-desc">Our global network ensures you get the fastest possible connection.</p>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 NexusProxy. All rights reserved.</p>
+        </footer>
+    </div>
 
-        <link rel="stylesheet" href="example.css">
-    </head>
-    <body>
-        <input type="text" id="urlInput" placeholder="Enter URL here">
-        <button id="searchButton">Search Text</button>
-    </body>
+    <script>
+        // Initialize particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#8a2be2"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#8a2be2",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+        document.getElementById('urlInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('proxyBtn').click();
+            }
+        });
+    </script>
     <script src="example.js"></script>
+
+</body>
 </html>
