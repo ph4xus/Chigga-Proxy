@@ -1,1 +1,121 @@
-<h1>Yo, there aint nothin here (404 btw)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --primary-dark: #5a189a;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --light: #f8f9fa;
+            --gray: #2d2d2d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), #c77dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #b3b3b3;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .btn-container {
+            margin-top: 30px;
+        }
+
+        .home-btn {
+            padding: 15px 30px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #b3b3b3;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-content">
+            <h1>404</h1>
+            <div class="subtitle">Oops! The page you're looking for doesn't exist or has been moved. Don't worry, we've got your back.</div>
+            <div class="btn-container">
+                <a href="/" class="home-btn">Go Back Home</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 gigga proxy. All Rights Reserved.
+    </footer>
+    
+</body>
+</html>

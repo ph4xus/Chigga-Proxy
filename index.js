@@ -8,7 +8,7 @@ import { hostname } from "node:os"
 const server = http.createServer();
 const app = express(server);
 const __dirname = process.cwd();
-const bareServer = createBareServer('/b/');
+const bareServer = createBareServer('/phexus');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -38,14 +38,6 @@ app.get('/', (req, res) => {
 app.get('/index', (req, res) => {
     res.sendFile(path.join(process.cwd(), '/public/index.html'));
 });
-
-/* add your own extra urls like this:
-
-app.get('/pathOnYourSite', (req, res) => {
-    res.sendFile(path.join(process.cwd(), '/linkToItInYourSource'));
-});
-
-*/
 
 const PORT = 3000;
 server.on('listening', () => {

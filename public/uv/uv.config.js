@@ -1,7 +1,6 @@
-/*global Ultraviolet*/
 self.__uv$config = {
     prefix: "/uv/",
-    bare: "https://dig-mu.vercel.app/bare/",
+    bare: "/phexus",
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: "/uv/uv.handler.js",
