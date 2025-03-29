@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mogging Ken Carson</title>
+    <style>
+        .iframeWindow {
+            position: absolute;
+            width: 100vw;
+            height: 90vh;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <iframe id="iframeWindow" class="iframeWindow"></iframe>
+
+    <script>
+        var urlofsus = localStorage.getItem('url');
+        
+        if (urlofsus) {
+            var iframe = document.getElementById("iframeWindow");
+            
+            iframe.src = urlofsus;
+        } else {
+            console.error('URL not found in localStorage');
+        }
+    </script>
+
+</body>
+</html>
