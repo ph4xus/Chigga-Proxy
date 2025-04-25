@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | Gigga Proxy</title>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/uv/uv.bundle.js"></script>
+    <script src="/uv/uv.config.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("/uv/sw.js", {
+                    scope: __uv$config.prefix,
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <span class="logo-text">Gigga Proxy</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/s">Settings</a></li>
+                    <li><a href="/bypass">Apps</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h1>Settings</h1>
+            <p class="subtitle">Configure your preferences and customize your browsing experience.</p>
+
+            <div class="features">
+                <div class="feature-card">
+                    <h3 class="feature-title">Proxy Settings</h3>
+                    <p class="feature-desc">Configure your proxy settings and encryption options for enhanced privacy.</p>
+                    <button class="search-btn">Configure</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3 class="feature-title">Appearance</h3>
+                    <p class="feature-desc">Choose a theme and customize the UI for a more personalized experience.</p>
+                    <button class="search-btn">Customize</button>
+                </div>
+
+                <div class="feature-card">
+                    <h3 class="feature-title">Security</h3>
+                    <p class="feature-desc">Enable additional security measures to safeguard your browsing.</p>
+                    <button class="search-btn">Enable</button>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2023 NexusProxy. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#8a2be2"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#8a2be2",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+    <script src="example.js"></script>
+</body>
+</html>
